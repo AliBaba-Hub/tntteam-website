@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TNT™️</title>
+    <link rel="icon" type="image/png" href="tntteam.png">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">™️TNT</a>
+
+        <nav>
+            <a href="#" class="active"> صفحه اصلی</a>
+            <a href="#" >خدمات</a>
+            <a href="#" >اسکیل ها</a>
+            <a href="#" >آموزشات</a>
+            <a href="#" >نمونه کارها</a>
+            <a href="#" >ارتباط با ما</a>
+        </nav>
+        <!-- <div class="language-switcher" onclick="changeLanguage()"><i class="fa-solid fa-globe"></i></div> -->
+         <div class="dark-mode" onclick="lightDarkMode()"><i class="fa-solid fa-moon"></i></div>
+        </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="tntteam.png" alt="" loading="lazy">
+        </div>
+        <div class="home-content">
+            <!-- <h1>هستیم<span>TNT™️</span> سلام ، ما</h1> -->
+            <h1>سلام ما <span>™️TNT</span>هستیم</h1>
+            <!-- <h1 data-lang-en="Hi, It's TNT™️" data-lang-fa="هستیم TNT™️ سلام ، ما ">Hi, It's <span>TNT™️</span></h1> -->
+            <h3 class="typing-text">ما  <span></span></h3>
+            <p>تیم ما در شهریور ماه سال 1400 توسط مهتی ترنم نژاد تربتی تاسیس شد ، ما از سال 1400 تا به کنون در زمینه دولوپری ربات های دیسکورد ، دولوپری سرورهای فایوم ، طراحی سایت ، مدل سازی با بلندر ، ادیت با فتوشاپ و ... فعالیت کرده ایم و هدفمان پیشرفت و یادگیری دانش های جدید در دنیای برنامه نویسی و ارائه پروژه های جدید و طرح های پیشرفته است</p>
+            <div class="social-icons">
+                <a href="https://discord.gg/hePgbSeWQ5"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/TNTTEAM-IR"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.coffeebede.com/tntteam"><i class="fa-solid fa-mug-hot"></i></a>
+                <a href="https://www.youtube.com/@tntteam8063"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <a href="https://discord.com/users/740125951496552459" class="btn">ما را استخدام کنید</a>
+        </div>
+    </section>
+    <script>
+        function lightDarkMode(){
+            const darkMode = document.querySelector(".dark-mode i");
+            const elements = document.querySelectorAll("body, section, nav a, .btn, .typing-text span");
+            
+            darkMode.classList.toggle("fa-sun");
+            darkMode.classList.toggle("fa-moon");
+            darkMode.style.color = darkMode.classList.contains("fa-moon") ? "white" : "black";
+
+            elements.forEach(element => {
+                element.classList.toggle("dark-mode-class");
+            });
+        }
+        // function changeLanguage(){
+        //     const languageSwitcher = document.querySelector(".language-switcher i");
+        //     const elements = document.querySelectorAll("[data-lang-en], [data-lang-fa]");
+
+        //     const isEnglish = languageSwitcher.classList.contains("fa-globe");
+
+        //     elements.forEach(element => {
+        //         if (isEnglish) {
+        //             element.textContent = element.getAttribute("data-lang-fa");
+        //         } else {
+        //             element.textContent = element.getAttribute("data-lang-en");
+        //         }
+        //     });
+
+        //     languageSwitcher.classList.toggle("fa-globe");
+        //     languageSwitcher.classList.toggle("fa-earth-asia");
+        // }
+    </script>   
+</body>
+</html>
